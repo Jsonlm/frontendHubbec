@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+/* css.gg */
+@import url('https://css.gg/css');
+
+/* UNPKG */
+@import url('https://unpkg.com/css.gg/icons/all.css');
+
+/* JSDelivr */
+@import url('https://cdn.jsdelivr.net/npm/css.gg/icons/all.css');
+
+/* PrimeNG */
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+* {
+  height: auto;
+  margin: auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #f2f2f2;
+}

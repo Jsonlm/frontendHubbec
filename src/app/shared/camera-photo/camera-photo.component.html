@@ -1,0 +1,22 @@
+<div style="text-align:center">
+  <div>
+    <webcam [height]="500" [width]="300" [trigger]="triggerObservable" (imageCapture)="handleImage($event)" *ngIf="showWebcam"
+            [imageQuality]="1"
+            (initError)="handleInitError($event)"
+            imageType="image/jpeg"
+    ></webcam>
+    <br/>
+    <button pButton (click)="triggerSnapshot();">Tomar Foto</button>
+    <button pButton (click)="toggleWebcam();">Cambiar cámara</button>
+    <br/>
+  </div>
+</div>
+
+<div *ngIf="webcamImage">
+  <img class="snapshot" [src]="webcamImage.imageAsDataUrl"/>
+</div>
+
+<h4 *ngIf="errors.length > 0">Messages:</h4>
+<ul *ngFor="let error of errors">
+  <li>{{error | json}}</li>
+</ul>

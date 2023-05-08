@@ -1,0 +1,90 @@
+button {
+  margin-top: 15px;
+}
+
+div section form {
+  display: block;
+}
+
+div section form div {
+  margin-bottom: 20px;
+}
+
+div section div a {
+  width: 100px ;
+  text-decoration: double;
+  color: #171447;
+}
+
+
+div section form label {
+  font-size: smaller;
+}
+
+input {
+  border: 1px solid #80808061;
+  border-radius: 7px;
+  font-size: small;
+  padding: 10px;
+  width: 200px;
+  float: right;
+}
+
+label {
+float: left;
+padding: 10px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.boxRegister {
+  width: 200px;
+  display: grid;
+  margin-top: 5%;
+}
+
+.boxEdit {
+  width: 200px;
+  display: grid;
+  margin-top: 5%;
+}
+
+.button {
+  background-color: #b8b6b6;
+  border: 0px;
+  border-radius: 30px;
+  box-shadow: 0 0 10px 0 #b8b6b6;
+  color: #ffffff;
+  display: flex;
+  font-size: larger;
+  justify-content: center;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  width: 200px;
+}
+
+.button:hover {
+  background-color: #b51700;
+  border: 0px;
+  border-radius: 30px;
+  box-shadow: 0 0 10px 0 #b8b6b6;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: larger;
+  margin: auto;
+  padding: 10px;
+  width: 200px;
+}
+
+.calendar {
+  width: 200px;
+  float: right;
+}
+
+.form-group {
+  display: table-footer-group;
+}

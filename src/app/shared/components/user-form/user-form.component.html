@@ -1,0 +1,136 @@
+<form [formGroup]="userForm" [ngClass]="{'boxRegister': isRegister, '': isEdit || isVerify}">
+  <h1 *ngIf="isRegister">Registrate en Hubbec</h1>
+
+  <div [ngClass]="{'': isRegister, 'form-group': isEdit || isVerify}" *ngIf="isRegister || isEdit || isVerify">
+    <label for="">Correo Electrónico</label>
+    <input pInputText type="text" placeholder="Correo electrónico" formControlName="email" [readonly]="isVerify" >
+    <section *ngIf="userForm.get('email')?.errors && (userForm.get('email')?.dirty || userForm.get('email')?.touched)">
+      <small severity="error" *ngIf="userForm.get('email')?.hasError('required')">
+        Correo electrónico es requerido.
+      </small>
+      <small *ngIf="userForm.get('email')?.hasError('minlength')">
+        El correo electrónico debe tener al menos 20 caracteres.
+      </small>
+      <small *ngIf="userForm.get('email')?.hasError('pattern')">
+        Formato de correo electrónico incorrecto
+      </small>
+    </section>
+  </div>
+  <div  [ngClass]="{'': isRegister, 'form-group': isEdit || isVerify}"  *ngIf="isRegister || isEdit || isVerify">
+    <label for="">Número de teléfono</label>
+    <input type="text" placeholder="Contraseña" formControlName="phoneNumber" [readonly]="isVerify">
+    <section *ngIf="userForm.get('phoneNumber')?.errors && (userForm.get('phoneNumber')?.dirty || userForm.get('phoneNumber')?.touched)">
+      <small severity="error" *ngIf="userForm.get('phoneNumber')?.hasError('required')">
+        Teléfono celular es requerida.
+      </small>
+      <small *ngIf="userForm.get('phoneNumber')?.hasError('minlength')">
+        Teléfono celular debe tener 10 caracteres.
+      </small>
+      <small *ngIf="userForm.get('phoneNumber')?.hasError('maxlength')">
+        Teléfono celular debe tener 10 caracteres.
+      </small>
+      <small *ngIf="userForm.get('phoneNumber')?.hasError('pattern')">
+        Por favor digita sólo números.
+      </small>
+    </section>
+  </div>
+  <div [ngClass]="{'': isRegister, 'form-group': isEdit || isVerify}"  *ngIf="isRegister || isEdit || isVerify">
+    <label for="">Nombres</label>
+    <input type="text" placeholder="Nombres" formControlName="firstname" [readonly]="!isEdit || isRegister">
+    <section *ngIf="userForm.get('firstname')?.errors && (userForm.get('firstname')?.dirty || userForm.get('firstname')?.touched)">
+      <small severity="error" *ngIf="userForm.get('firstname')?.hasError('required')">
+        Nombre o nombres es requerido.
+      </small>
+      <small *ngIf="userForm.get('firstname')?.hasError('minlength')">
+        Nombre debe tener al menos 3 caracteres.
+      </small>
+      <small *ngIf="userForm.get('firstname')?.hasError('pattern')">
+        Por favor digita sólo letras.
+      </small>
+    </section>
+  </div>
+  <div  [ngClass]="{'': isRegister, 'form-group': isEdit || isVerify}"  *ngIf="isRegister || isEdit || isVerify">
+    <label for="">Apellidos</label>
+    <input type="text" placeholder="Apellidos" formControlName="lastname" [readonly]="isVerify">
+    <section *ngIf="userForm.get('lastname')?.errors && (userForm.get('lastname')?.dirty || userForm.get('lastname')?.touched)">
+      <small severity="error" *ngIf="userForm.get('lastname')?.hasError('required')">
+        Apellidos es requerido.
+      </small>
+      <small *ngIf="userForm.get('lastname')?.hasError('minlength')">
+        Apellidos debe tener al menos 20 caracteres.
+      </small>
+      <small *ngIf="userForm.get('lastname')?.hasError('pattern')">
+        Por favor digita solo letras, numeros y # . -.
+      </small>
+    </section>
+  </div>
+  <div  [ngClass]="{'': isRegister, 'form-group': isEdit || isVerify}"  *ngIf="isRegister || isEdit || isVerify">
+    <label for="">Tipo de documento</label>
+    <input type="text" placeholder="Tipo de documento" formControlName="documentType" [readonly]="isVerify">
+    <section *ngIf="userForm.get('documentType')?.errors && (userForm.get('documentType')?.dirty || userForm.get('documentType')?.touched)">
+      <small severity="error" *ngIf="userForm.get('documentType')?.hasError('required')">
+        Tipo de documento es requerido.
+      </small>
+    </section>
+  </div>
+  <div  [ngClass]="{'': isRegister, 'form-group': isEdit || isVerify}"  *ngIf="isRegister || isEdit || isVerify">
+    <label for="">Número de documento</label>
+    <input type="text" placeholder="Número de documento" formControlName="documentNumber" [readonly]="isVerify">
+    <section *ngIf="userForm.get('documentNumber')?.errors && (userForm.get('documentNumber')?.dirty || userForm.get('documentNumber')?.touched)">
+      <small severity="error" *ngIf="userForm.get('documentNumber')?.hasError('required')">
+        Número de documento es requerida.
+      </small>
+      <small *ngIf="userForm.get('documentNumber')?.hasError('minlength')">
+        Número de documento debe tener al menos 5 caracteres.
+      </small>
+      <small *ngIf="userForm.get('documentNumber')?.hasError('pattern')">
+        Por favor digita solo numeros.
+      </small>
+    </section>
+  </div>
+  <div  [ngClass]="{'': isRegister, 'form-group': isEdit || isVerify}"  *ngIf="isRegister || isEdit || isVerify">
+    <label for="">Fecha de nacimiento</label>
+    <p-calendar #birthdate (onSelect)="getBirthdate(birthdate.value)" [dateFormat]="'yy-mm-dd'"  class="calendar"></p-calendar>
+  </div>
+  <div  [ngClass]="{'': isRegister, 'form-group': isEdit || isVerify}"   *ngIf="isRegister || isEdit || isVerify">
+    <label for="">Fecha de expedición</label>
+    <p-calendar #expeditionDate (onSelect)="getExpeditionDate(expeditionDate.value)" [dateFormat]="'yy-mm-dd'" class="calendar"></p-calendar>
+  </div>
+  <div  [ngClass]="{'': isRegister, 'form-group': isEdit || isVerify}"  *ngIf="isEdit || isVerify">
+    <label for="">Pais</label>
+    <input type="text" placeholder="Pais" formControlName="country">
+    <section *ngIf="userForm.get('country')?.errors && (userForm.get('country')?.dirty || userForm.get('country')?.touched)">
+      <small severity="error" *ngIf="userForm.get('country')?.hasError('required')">
+        Pais es requerido.
+      </small>
+    </section>
+  </div>
+  <div  [ngClass]="{'': isRegister, 'form-group': isEdit || isVerify}"  *ngIf="isEdit || isVerify">
+    <label for="">Ciudad</label>
+    <input type="text" placeholder="Ciudad" formControlName="city">
+    <section *ngIf="userForm.get('city')?.errors && (userForm.get('city')?.dirty || userForm.get('city')?.touched)">
+      <small severity="error" *ngIf="userForm.get('city')?.hasError('required')">
+        Ciudad es requerido.
+      </small>
+    </section>
+  </div>
+  <div  [ngClass]="{'': isRegister, 'form-group': isEdit || isVerify}"  *ngIf="isEdit || isVerify">
+    <label for="">Direccion de residencia</label>
+    <input type="text" placeholder="Direccion de residencia" formControlName="address">
+    <section *ngIf="userForm.get('address')?.errors && (userForm.get('address')?.dirty || userForm.get('address')?.touched)">
+      <small severity="error" *ngIf="userForm.get('address')?.hasError('required')">
+        Direccion de residencia es requerido.
+      </small>
+    </section>
+  </div>
+  <div  [ngClass]="{'': isRegister, 'form-group': isEdit || isVerify}"  *ngIf="isEdit || isVerify">
+    <label for="">Foto</label>
+    <p-button label="Tomar y subir foto" (onClick)="showCamera = true"></p-button>
+    <p-dialog header="Por favor toma la foto" [(visible)]="showCamera" [style]="{ width: '600px', height: '600px' }" [closable]="showCamera">
+      <app-camera-photo *ngIf="showCamera"></app-camera-photo>
+    </p-dialog>
+  </div>
+  <button class="button" (click)="updateUser()" [disabled]="!userForm.valid" *ngIf="isEdit || isVerify">Actualizar</button>
+  <button class="button" (click)="goDashboard()" [disabled]="!userForm.valid" *ngIf="isRegister">Registrarse</button>
+  <button class="button" (click)="fillForm()" *ngIf="isRegister">Fill Form</button>
+</form>

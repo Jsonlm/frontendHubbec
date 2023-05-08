@@ -1,0 +1,22 @@
+footer {
+  position: absolute;
+  height: 80px;
+  width: 100%;
+}
+
+  /*
+  @media (max-width: 700px) {
+
+  .user-menu {
+    margin: auto;
+    background-color: #171447;
+    border-width: 1px;
+    border-color: #212121;
+    border-style: double;
+    border-radius: 1px 1px 10px 10px;
+    float: right;
+    width: 300px;
+    height: 300px;
+  }
+  }
+ */

@@ -1,0 +1,100 @@
+
+
+img {
+  height: 50%;
+  margin-top: 20px;
+  border-radius: 10%;
+}
+
+nav {
+  background-color: #171447;
+  height: 80px;
+  width: 100%;
+  z-index: 1;
+}
+
+nav * {
+  color: white;
+  float: left;
+  left: 0%;
+  margin-left: 30px;
+  top: 50%;
+}
+
+nav div {
+  margin-left: 30px;
+}
+
+nav i {
+  text-align: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 30px;
+}
+
+section h4 {
+  color: #fff;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.background {
+  background-color: #21212150;
+  height: 90%;
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+}
+
+.box {
+  height: 80px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.box:hover {
+  border-radius: 10px;
+  background-color: #26234d;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.button-menu {
+  border-radius: 50%;
+  color: #171447;
+  display: flex;
+  height: 40px;
+  margin: auto;
+  margin-top: 100px;
+  justify-content: center;
+  text-align: center;
+  width: 40px;
+}
+
+.icon-button-menu {
+  margin-right: auto;
+}
+
+.gg-menu {
+  /* This value will multiple the actual size  */
+  --ggs: 1;
+}
+
+.user-menu {
+  background-color: #171447;
+  border-color: #212121;
+  border-radius: 1px 1px 10px 10px;
+  border-style: double;
+  border-width: 1px;
+  float: right;
+  height: 300px;
+  margin: auto;
+  position: absolute;
+  right: 0%;
+  width: 300px;
+  z-index: 1;
+}

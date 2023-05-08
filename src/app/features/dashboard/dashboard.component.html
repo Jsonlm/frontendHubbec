@@ -1,0 +1,4 @@
+<app-header (newItemEvent)="userEvent($event)"></app-header>
+<p-dialog header="Por favor completa tu información" [(visible)]="showForm" [style]="{ width: '500px', height: '500px', display: 'inline-table'}" [closable]="showForm">
+  <app-user-form [data]="user" [isVerify]="true"  *ngIf="showForm" ></app-user-form>
+</p-dialog>

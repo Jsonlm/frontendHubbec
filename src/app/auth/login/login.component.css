@@ -1,0 +1,144 @@
+a {
+  color: #212121;
+  text-decoration: none;
+}
+
+div section form {
+  display: block;
+}
+
+div section form div {
+  margin-bottom: 20px;
+}
+
+div section div a {
+  width: 100px ;
+}
+
+
+div section form label {
+  font-size: smaller;
+}
+
+input {
+  border: 1px solid gray;
+  border-radius: 7px;
+  font-size: small;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+}
+
+section form h1 {
+  margin-bottom: 20px;
+}
+
+.box {
+  width: 300px;
+  display: grid;
+  margin-top: 30%;
+}
+
+.button {
+  background-color: #b8b6b6;
+  border: 0px;
+  border-radius: 30px;
+  box-shadow: 0 0 10px 0 #b8b6b6;
+  color: #ffffff;
+  display: flex;
+  font-size: larger;
+  justify-content: center;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  width: 200px;
+}
+
+.button:hover {
+  background-color: #b51700;
+  border: 0px;
+  border-radius: 30px;
+  box-shadow: 0 0 10px 0 #b8b6b6;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: larger;
+  margin: auto;
+  padding: 10px;
+  width: 200px;
+}
+
+.login-form {
+  position: absolute;
+  right: 0%;
+  background-color: #ffffff;
+  width: 50%;
+  height: 100%;
+  color: #212121;
+}
+
+.register {
+  width: 300px;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  margin-top: 20px;
+}
+
+.register:nth-child(1) {
+  display: flex;
+}
+
+.sidebar {
+  justify-content: center;
+  position: absolute;
+  text-align: center;
+  background-color: #b51700;
+  width: 50%;
+  height: 100%;
+  color: #ffffff;
+}
+
+.section1 {
+  margin: auto;
+  width: 250px;
+  margin-top: 5%;
+  margin-bottom: 30px;
+}
+
+.section {
+  margin: auto;
+  height: 200px;
+  border-radius: 10%;
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    display: none;
+    height: 100%;
+  }
+
+  .login-form {
+    justify-content: center;
+    position: relative;
+    width: 100%;
+  }
+}
+
+@media (max-height: 360px) {
+  .sidebar {
+    justify-content: center;
+    position: absolute;
+    text-align: center;
+    background-color: #b51700;
+    width: 50%;
+    height: 220%;
+    color: #ffffff;
+  }
+
+  .section {
+    margin: auto;
+    height: 100px;
+    border-radius: 10%;
+  }
+}

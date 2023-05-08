@@ -1,0 +1,14 @@
+<nav >
+  <img [src]="LOGOURL" alt="" (click)="navigateToHome()">
+  <a class="gg-menu" title="Menu para un slide"> <!--(click)="showSidebar()"--></a>
+  <div class="box" style="float: right;"  (click)="showUserOptions()">
+    <i class="gg-user"></i>
+    <div class="gg-chevron-down"></div>
+  </div>
+</nav>
+<section class="user-menu" *ngIf="userMenuOptions">
+  <h4 (click)="navigateToHome()">{{userName}}</h4>
+  <button class="button-menu" (click)="editUser()"><i class="gg-pen icon-button-menu"></i></button>
+</section>
+<div class="background" (click)="closeUserOptions()"  *ngIf="userMenuOptions">
+</div>
