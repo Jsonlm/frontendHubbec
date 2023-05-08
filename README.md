@@ -1,6 +1,6 @@
 # Prueba Insttantt Hubbec - MEAN (MongoDB, Express, Angular, NodeJS)
 
-## Comandos de inicio de proyecto https://youtu.be/dN0WFUl2WX0
+## Video explicativo https://youtu.be/dN0WFUl2WX0
 
 ## Comandos de inicio de proyecto
     npm install - Esperar instalación
@@ -15,8 +15,6 @@
   >   localhost:4200/auth/register
 
   >   localhost:4200/features/dashboard
-
-
   
 ## Tecnologías usadas
   >  HTML
